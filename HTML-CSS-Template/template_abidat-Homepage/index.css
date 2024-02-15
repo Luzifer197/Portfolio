@@ -1,0 +1,130 @@
+:root{
+    --red: #b00739;
+    --white: #ffff;
+    --black: #0000;
+    --gray: rgb(117, 117, 117);
+    --darkgray: rgba(172, 170, 170, 0.305);
+    --scrolling: rgb(237, 237, 237);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar{
+    transition: all 0.6s
+}
+
+#navigator {
+    margin: auto;
+    height: 4rem;
+}
+
+.textcolormenubar{
+    -webkit-text-fill-color: var(--white);
+}
+
+.logo {
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./assets/abidat-logo-weiss.svg');
+    width: 10rem;
+    height: 3rem;
+    margin-left: 1.5rem;
+}
+
+.onscroll {
+    background-color: var(--scrolling);
+}
+
+.menuitemwhilescrolling {
+    -webkit-text-fill-color: var(--black) !important
+}
+
+.logowhilescrolling {
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./assets/abidat-logo-schwarz.svg');
+    width: 10rem;
+    height: 3rem;
+    margin-left: 1.5rem;
+}
+
+.Header{
+    width: 50rem;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+    -webkit-text-stroke-color: var(--black);
+    -webkit-text-stroke-width: 0.5rem;
+    -webkit-text-fill-color:var(--white);
+}
+
+.Header > h1, .Header > h2 {
+    font-weight: bold;
+}
+
+.sektion{
+    width: 40vw;
+    padding-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h3 {
+    -webkit-text-fill-color: var(--red);
+}
+
+.bg-picture {
+    background-image: -webkit-image-set('./assets/abidat-nuernberg-kl.jpg');
+    background-color: var(--gray);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    border: none;
+}
+
+.navigation {
+    background: transparent;
+}
+
+.link-to-social{
+    width: 10rem;
+    height: 3rem;
+    padding-right: 1.5rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.flex-children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.roundBackground{
+    border-radius: 50%;
+    border-color: var(--darkgray);
+    border-style:solid;
+    border-width: 10pt;   
+    z-index: 0;
+}
+
+.socialmedia-icons {
+    z-index: 1;
+    position: absolute;
+}

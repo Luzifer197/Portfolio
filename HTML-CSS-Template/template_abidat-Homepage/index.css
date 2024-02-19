@@ -1,7 +1,7 @@
 :root{
     --red: #b00739;
     --white: #ffff;
-    --black: #0000;
+    --black: #000;
     --gray: rgb(117, 117, 117);
     --darkgray: rgba(172, 170, 170, 0.305);
     --scrolling: rgb(237, 237, 237);
@@ -10,91 +10,45 @@
 body{
     width: 100vw;
     height: 100vh;
+    z-index: 0;
 }
 
+/* Navbar */
 .navbar{
-    transition: all 0.6s
+    transition: all 0.6s;
 }
 
-#navigator {
+.topnavigator {
     margin: auto;
     height: 4rem;
+    z-index: 10;
 }
 
-.textcolormenubar{
-    -webkit-text-fill-color: var(--white);
+.navbaronhover{
+    display: inline-block;
+    position: relative;
 }
 
-.logo {
-    background-position-y: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url('./assets/abidat-logo-weiss.svg');
-    width: 10rem;
-    height: 3rem;
-    margin-left: 1.5rem;
+.navbaronhover::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--white);
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out; 
 }
 
-.onscroll {
-    background-color: var(--scrolling);
+.navbaronhover:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    transition: transform 0.3s;
 }
 
-.menuitemwhilescrolling {
-    -webkit-text-fill-color: var(--black) !important
-}
-
-.logowhilescrolling {
-    background-position-y: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url('./assets/abidat-logo-schwarz.svg');
-    width: 10rem;
-    height: 3rem;
-    margin-left: 1.5rem;
-}
-
-.Header{
-    width: 50rem;
-    margin-top: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    
-    -webkit-text-stroke-color: var(--black);
-    -webkit-text-stroke-width: 0.5rem;
-    -webkit-text-fill-color:var(--white);
-}
-
-.Header > h1, .Header > h2 {
-    font-weight: bold;
-}
-
-.sektion{
-    width: 40vw;
-    padding-top: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.h3 {
-    -webkit-text-fill-color: var(--red);
-}
-
-.bg-picture {
-    background-image: -webkit-image-set('./assets/abidat-nuernberg-kl.jpg');
-    background-color: var(--gray);
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 5rem;
-    padding-bottom: 10rem;
-    border: none;
-}
-
-.navigation {
-    background: transparent;
-}
-
+/* Social Media */
 .link-to-social{
     width: 10rem;
     height: 3rem;
@@ -121,10 +75,93 @@ body{
     border-color: var(--darkgray);
     border-style:solid;
     border-width: 10pt;   
-    z-index: 0;
+    z-index: 2;
 }
 
 .socialmedia-icons {
     z-index: 1;
     position: absolute;
+}
+
+/* Sidebar */
+.s-sidebar__trigger {
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+}
+
+.sidebar{
+    width: 23rem;
+    height: 100vh;
+    position: fixed;
+    margin-left: auto;
+    float: right;
+    transition: right left 0.6s;
+}
+
+.sidebaritem-on_over:hover{
+    -webkit-text-fill-color: var(--red);
+    transition: all 0.3s;
+}
+
+/* Logo */
+.logo {
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./assets/abidat-logo-weiss.svg');
+    width: 10rem;
+    height: 3rem;
+    margin-left: 1.5rem;
+    transition: all 0.6s
+}
+
+.logowhilescrolling {
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./assets/abidat-logo-schwarz.svg');
+    width: 10rem;
+    height: 3rem;
+    margin-left: 1.5rem;
+    transition: all 0.6s
+}
+
+/* Header */
+.header{
+    width: 50rem;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    -webkit-text-fill-color:var(--white);
+}
+
+.Header > h1, .Header > h2 {
+    font-weight: bold;
+}
+
+.bg-picture {
+    background-image: -webkit-image-set('./assets/abidat-nuernberg-kl.jpg');
+    background-color: var(--gray);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    border: none;
+}
+
+/* Contant-Container */
+.h3 {
+    -webkit-text-fill-color: var(--red);
+}
+.sektion{
+    width: 40vw;
+    padding-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
 }

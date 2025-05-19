@@ -1,20 +1,21 @@
-:root{
-    --red: #b00739;
-    --white: #ffff;
-    --black: #000;
-    --gray: rgb(117, 117, 117);
+:root {
+    --antrazitgrau: #293133;
+    --antrazitgrauBild: #293133b9;
+    --ghostwhite: #fef9ff;
+    --snowwhite: #FFFAFA;
+    --graphitblack: #27292B;
+    --grey: #787878;
     --darkgray: rgba(172, 170, 170, 0.305);
-    --scrolling: rgb(237, 237, 237);
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
     z-index: 0;
 }
 
 /* Navbar */
-.navbar{
+.navbar {
     transition: all 0.6s;
 }
 
@@ -24,12 +25,12 @@ body{
     z-index: 10;
 }
 
-.navbaronhover{
+.navbaronhover {
     display: inline-block;
     position: relative;
 }
 
-.navbaronhover::after{
+.navbaronhover::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -37,19 +38,19 @@ body{
     height: 3px;
     bottom: 0;
     left: 0;
-    background-color: var(--white);
+    background-color: var(--ghostwhite);
     transform-origin: bottom left;
-    transition: transform 0.25s ease-out; 
+    transition: transform 0.25s ease-out;
 }
 
-.navbaronhover:hover::after{
+.navbaronhover:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
     transition: transform 0.3s;
 }
 
 /* Social Media */
-.link-to-social{
+.link-to-social {
     width: 10rem;
     height: 3rem;
     padding-right: 1.5rem;
@@ -70,11 +71,11 @@ body{
     flex-grow: 1;
 }
 
-.roundBackground{
+.roundBackground {
     border-radius: 50%;
     border-color: var(--darkgray);
-    border-style:solid;
-    border-width: 10pt;   
+    border-style: solid;
+    border-width: 10pt;
     z-index: 2;
 }
 
@@ -93,7 +94,7 @@ body{
     height: 100%;
 }
 
-.sidebar{
+.sidebar {
     width: 23rem;
     height: 100vh;
     position: fixed;
@@ -102,8 +103,8 @@ body{
     transition: right left 0.6s;
 }
 
-.sidebaritem-on_over:hover{
-    -webkit-text-fill-color: var(--red);
+.sidebaritem-on_over:hover {
+    -webkit-text-fill-color: var(--grey);
     transition: all 0.3s;
 }
 
@@ -112,7 +113,7 @@ body{
     background-position-y: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url('./assets/abidat-logo-weiss.svg');
+    background-image: url('./assets/LogoWithTextAside.svg');
     width: 10rem;
     height: 3rem;
     margin-left: 1.5rem;
@@ -123,7 +124,7 @@ body{
     background-position-y: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url('./assets/abidat-logo-schwarz.svg');
+    background-image: url('./assets/LogoWithText.svg');
     width: 10rem;
     height: 3rem;
     margin-left: 1.5rem;
@@ -131,25 +132,28 @@ body{
 }
 
 /* Header */
-.header{
+.header {
     width: 50rem;
     margin-top: 10rem;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    -webkit-text-fill-color:var(--white);
+    -webkit-text-fill-color: var(--ghostwhite);
 }
 
-.Header > h1, .Header > h2 {
+.Header>h1,
+.Header>h2 {
     font-weight: bold;
 }
 
 .bg-picture {
     background-image: -webkit-image-set('./assets/abidat-nuernberg-kl.jpg');
-    background-color: var(--gray);
+    background-color: var(--antrazitgrauBild);
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
     padding-top: 5rem;
     padding-bottom: 10rem;
     border: none;
@@ -157,9 +161,10 @@ body{
 
 /* Contant-Container */
 .h3 {
-    -webkit-text-fill-color: var(--red);
+    -webkit-text-fill-color: var(--antrazitgrau);
 }
-.sektion{
+
+.sektion {
     width: 40vw;
     padding-top: 10rem;
     margin-left: auto;

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="500"
+   height="300"
+   viewBox="0 0 500 300"
+   fill="none"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="LogoWithText.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.89"
+     inkscape:cx="250.12853"
+     inkscape:cy="150"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <!-- Gradient für das Monogramm und Schriftzug import -->
+  <defs
+     id="defs2">
+    <linearGradient
+       id="symbolGradient"
+       x1="150"
+       y1="50"
+       x2="250"
+       y2="150"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-47.81491,-42.159383)">
+      <stop
+         offset="0%"
+         stop-color="#FFFAFA"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#293133"
+         id="stop2" />
+    </linearGradient>
+    <style
+       id="style2">
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;display=swap');
+    </style>
+  </defs>
+  <!-- Kombiniertes Initialen-Monogramm und Digitales Symbol (MF) -->
+  <path
+     d="M 102.18509,107.84062 V 7.840617 l 50,50 v -50 h 50 V 107.84062 h -25 V 32.840617 l -25,25 -25,-25 v 75.000003 z"
+     fill="url(#symbolGradient)"
+     stroke="#293133"
+     stroke-width="6"
+     id="path2"
+     style="fill:url(#symbolGradient)" />
+  <!-- Schriftzug-Logo (geschwungene Schrift) -->
+  <text
+     x="177.18509"
+     y="152.84061"
+     text-anchor="middle"
+     font-size="48px"
+     font-family="'Great Vibes', cursive"
+     stroke="#27292b"
+     stroke-width="1.25"
+     fill="#fef9ff"
+     id="text2">Massimo Fasanella</text>
+</svg>

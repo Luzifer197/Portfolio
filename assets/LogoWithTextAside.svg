@@ -19,7 +19,7 @@
       <stop offset="100%" stop-color="#293133" />
     </linearGradient>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;display=swap');
+      @import url('assets/fonts.css');
     </style>
   </defs>
 

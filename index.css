@@ -170,3 +170,18 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+@media (orientation: portrait) {
+    .bg-picture {
+        background-image: -webkit-image-set('./assets/abidat-nuernberg-kl.jpg');
+        background-color: var(--antrazitgrauBild);
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: -10%;
+        width: 100vh;
+        height: 50vh;
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+        border: none;
+}
+}

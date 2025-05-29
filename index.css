@@ -8,12 +8,6 @@
     --darkgray: rgba(172, 170, 170, 0.305);
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-}
-
 /* Navbar */
 .navbar {
     transition: all 0.6s;

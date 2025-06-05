@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Innovative Webentwicklung | Dein Name</title>
+    <title>Massimo Fasanella</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="./assets/Logo.svg">
 </head>
 <body class="font-sans antialiased bg-[var(--bg-primary)] text-[var(--text-primary)]">
     <!-- Particle JS (will be loaded dynamically) -->
@@ -15,22 +16,21 @@
     <!-- Navigation -->
     <nav class="navbar fixed w-full py-4 px-6 z-50 shadow-sm" style="background-color: var(--nav-bg)">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold gradient-text">DEV<span class="text-gray-800">Portfolio</span></a>
+            <a href="#" class="text-2xl font-bold gradient-text">DEV<span style="color: var(--text-primary)">Portfolio</span></a>
             
             <div class="hidden md:flex space-x-8">
-                <a href="#home" class="animated-border px-1 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Home</a>
-                <a href="#about" class="animated-border px-1 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Über mich</a>
-                <a href="#skills" class="animated-border px-1 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Skills</a>
-                <a href="#projects" class="animated-border px-1 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Projekte</a>
-                <a href="#contact" class="animated-border px-1 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Kontakt</a>
+                <a href="#home" class="animated-border px-1 py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition" style="color: var(--text-secondary)">Home</a>
+                <a href="#about" class="animated-border px-1 py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition" style="color: var(--text-secondary)">Über mich</a>
+                <a href="#skills" class="animated-border px-1 py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition" style="color: var(--text-secondary)">Skills</a>
+                <a href="#projects" class="animated-border px-1 py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition" style="color: var(--text-secondary)">Projekte</a>
+                <a href="#contact" class="animated-border px-1 py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition" style="color: var(--text-secondary)">Kontakt</a>
             </div>
             
             <div class="flex items-center">
-                <button id="dark-mode-toggle" class="mr-4 text-gray-700 dark:text-gray-300">
-                    <i class="fas fa-moon dark:hidden"></i>
-                    <i class="fas fa-sun hidden dark:block"></i>
+                <button id="dark-mode-toggle" class="mr-4" style="color: var(--text-primary)">
+                    <i class="fas fa-sun block"></i>
                 </button>
-                <button id="mobile-menu-button" class="md:hidden text-gray-700 dark:text-gray-300">
+                <button id="mobile-menu-button" class="md:hidden" style="color: var(--text-primary)">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -38,11 +38,11 @@
         
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white rounded-lg shadow-lg mt-4 py-2">
-            <a href="#home" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-indigo-900/30">Home</a>
-            <a href="#about" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-indigo-900/30">Über mich</a>
-            <a href="#skills" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-indigo-900/30">Skills</a>
-            <a href="#projects" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-indigo-900/30">Projekte</a>
-            <a href="#contact" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-indigo-900/30">Kontakt</a>
+            <a href="#home" class="block px-4 py-2 hover:bg-indigo-50 dark:hover:bg-indigo-900/30" style="color: var(--text-secondary)">Home</a>
+            <a href="#about" class="block px-4 py-2 hover:bg-indigo-50 dark:hover:bg-indigo-900/30" style="color: var(--text-secondary)">Über mich</a>
+            <a href="#skills" class="block px-4 py-2 hover:bg-indigo-50 dark:hover:bg-indigo-900/30" style="color: var(--text-secondary)">Skills</a>
+            <a href="#projects" class="block px-4 py-2 hover:bg-indigo-50 dark:hover:bg-indigo-900/30" style="color: var(--text-secondary)">Projekte</a>
+            <a href="#contact" class="block px-4 py-2 hover:bg-indigo-50 dark:hover:bg-indigo-900/30" style="color: var(--text-secondary)">Kontakt</a>
         </div>
     </nav>
     
@@ -55,12 +55,12 @@
                         <span class="gradient-text">Innovative Lösungen</span><br>
                         für die digitale Welt
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+                    <p class="text-lg md:text-xl mb-8 leading-relaxed" style="color: var(--text-primary)">
                         Ich bin ein leidenschaftlicher Webentwickler, der sich auf moderne, benutzerfreundliche und hochperformante Webanwendungen spezialisiert hat.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#projects" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full font-medium transition shadow-lg hover:shadow-xl">Meine Projekte</a>
-                        <a href="#contact" class="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-8 py-3 rounded-full font-medium transition">Kontakt aufnehmen</a>
+                        <a href="#contact" class="border-2 border-indigo-600 px-8 py-3 rounded-full font-medium transition" style="color: var(--text-primary)">Kontakt aufnehmen</a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
@@ -77,7 +77,7 @@
                                     <i class="fas fa-code"></i>
                                 </div>
                                 <div class="ml-3">
-                                    <p class="font-bold">5+ Jahre</p>
+                                    <p class="font-bold text-gray-900">5+ Jahre</p>
                                     <p class="text-sm text-gray-500">Erfahrung</p>
                                 </div>
                             </div>
@@ -112,8 +112,8 @@
                 </div>
                 
                 <div class="md:w-2/3 md:pl-12">
-                    <h3 class="text-2xl font-bold mb-4">Meine Philosophie</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--text-primary)">Meine Philosophie</h3>
+                    <p class="mb-6 leading-relaxed" style="color: var(--text-secondary)">
                         Ich glaube, dass exzellente Webentwicklung mehr ist als nur Code schreiben. Es geht darum, verständliche, wartbare und skalierbare Lösungen zu schaffen, die echte Probleme lösen und herausragende Benutzererlebnisse bieten.
                     </p>
                     
@@ -123,8 +123,8 @@
                                 <i class="fas fa-lightbulb"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-2">Kreatives Denken</h4>
-                                <p class="text-gray-600 text-sm">Innovative Ansätze für komplexe Herausforderungen</p>
+                                <h4 class="font-bold mb-2" style="color: var(--text-primary)">Kreatives Denken</h4>
+                                <p class="text-sm" style="color: var(--text-secondary)">Innovative Ansätze für komplexe Herausforderungen</p>
                             </div>
                         </div>
                         <div class="flex">
@@ -132,8 +132,8 @@
                                 <i class="fas fa-tachometer-alt"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-2">Hohe Leistung</h4>
-                                <p class="text-gray-600 text-sm">Optimierte Lösungen für beste Geschwindigkeit</p>
+                                <h4 class="font-bold mb-2" style="color: var(--text-primary)">Hohe Leistung</h4>
+                                <p class="text-sm" style="color: var(--text-secondary)">Optimierte Lösungen für beste Geschwindigkeit</p>
                             </div>
                         </div>
                         <div class="flex">
@@ -141,8 +141,8 @@
                                 <i class="fas fa-mobile-alt"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-2">Responsive Design</h4>
-                                <p class="text-gray-600 text-sm">Perfekte Darstellung auf allen Geräten</p>
+                                <h4 class="font-bold mb-2" style="color: var(--text-primary)">Responsive Design</h4>
+                                <p class="text-sm" style="color: var(--text-secondary)">Perfekte Darstellung auf allen Geräten</p>
                             </div>
                         </div>
                         <div class="flex">
@@ -150,8 +150,8 @@
                                 <i class="fas fa-code-branch"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-2">Moderne Technologien</h4>
-                                <p class="text-gray-600 text-sm">Aktuellste Frameworks und Best Practices</p>
+                                <h4 class="font-bold mb-2" style="color: var(--text-primary)">Moderne Technologien</h4>
+                                <p class="text-sm" style="color: var(--text-secondary)">Aktuellste Frameworks und Best Practices</p>
                             </div>
                         </div>
                     </div>
@@ -171,7 +171,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
                 <span class="gradient-text">Meine Skills</span>
             </h2>
-            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+            <p class="text-center mb-16 max-w-2xl mx-auto" style="color: var(--text-primary)">
                 Eine Auswahl der Technologien und Werkzeuge, mit denen ich arbeite, um moderne Webanwendungen zu erstellen.
             </p>
             
@@ -331,7 +331,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
                 <span class="gradient-text">Meine Projekte</span>
             </h2>
-            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+            <p class="text-center mb-16 max-w-2xl mx-auto" style="color: var(--text-primary)">
                 Eine Auswahl meiner jüngsten Projekte, die meine Fähigkeiten und Expertise demonstrieren.
             </p>
             
@@ -350,7 +350,7 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Modernes E-Commerce System</h3>
+                        <h3 class="font-bold text-gray-700 text-xl mb-2">Modernes E-Commerce System</h3>
                         <p class="text-gray-600 mb-4">
                             Eine vollständige E-Commerce-Lösung mit Produktkatalog, Warenkorb, Zahlungsintegration und Admin-Dashboard.
                         </p>
@@ -385,7 +385,7 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Social Media Plattform</h3>
+                        <h3 class="font-bold text-xl mb-2 text-gray-700">Social Media Plattform</h3>
                         <p class="text-gray-600 mb-4">
                             Eine moderne Social-Media-Anwendung mit Echtzeit-Updates, Benutzerprofilen und Inhaltsfreigabe.
                         </p>
@@ -420,7 +420,7 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Task Management System</h3>
+                        <h3 class="font-bold text-xl mb-2 text-gray-700">Task Management System</h3>
                         <p class="text-gray-600 mb-4">
                             Ein umfassendes Task-Management-Tool mit Teamfunktionen, Fortschrittsverfolgung und Projektplanung.
                         </p>
@@ -455,7 +455,7 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Datenvisualisierung Dashboard</h3>
+                        <h3 class="font-bold text-xl mb-2 text-gray-700">Datenvisualisierung Dashboard</h3>
                         <p class="text-gray-600 mb-4">
                             Ein interaktives Dashboard zur Analyse und Visualisierung komplexer Datensätze mit Echtzeit-Updates.
                         </p>
@@ -492,7 +492,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
                 <span class="gradient-text">Kontakt aufnehmen</span>
             </h2>
-            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+            <p class="text-center mb-16 max-w-2xl mx-auto" style="color: var(--text-primary)">
                 Haben Sie ein Projekt, an dem wir zusammenarbeiten können? Schreiben Sie mir eine Nachricht und ich melde mich innerhalb von 24 Stunden bei Ihnen.
             </p>
             
@@ -502,19 +502,19 @@
                         <h3 class="font-bold text-xl mb-6">Schreiben Sie mir</h3>
                         <form>
                             <div class="mb-4">
-                                <label for="name" class="block text-gray-700 mb-2">Ihr Name</label>
+                                <label for="name" class="block mb-2" style="color: var(--text-primary)">Ihr Name</label>
                                 <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
                             </div>
                             <div class="mb-4">
-                                <label for="email" class="block text-gray-700 mb-2">Ihre E-Mail</label>
+                                <label for="email" class="block mb-2" style="color: var(--text-primary)">Ihre E-Mail</label>
                                 <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
                             </div>
                             <div class="mb-4">
-                                <label for="subject" class="block text-gray-700 mb-2">Betreff</label>
+                                <label for="subject" class="block mb-2" style="color: var(--text-primary)">Betreff</label>
                                 <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
                             </div>
                             <div class="mb-6">
-                                <label for="message" class="block text-gray-700 mb-2">Ihre Nachricht</label>
+                                <label for="message" class="block mb-2" style="color: var(--text-primary)">Ihre Nachricht</label>
                                 <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
                             </div>
                             <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg font-medium transition shadow-md hover:shadow-lg">
@@ -535,7 +535,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold mb-1">Adresse</h4>
-                                    <p class="text-gray-600">Musterstraße 123<br>12345 Musterstadt</p>
+                                    <p style="color: var(--text-primary)">Musterstraße 123<br>12345 Musterstadt</p>
                                 </div>
                             </div>
                             
@@ -546,7 +546,7 @@
                                 <div>
                                     <h4 class="font-bold mb-1">E-Mail</h4>
                                     <p class="text-gray-600">
-                                        <a href="mailto:webdev@example.com" class="hover:text-indigo-600">webdev@example.com</a>
+                                        <a href="mailto:massimo.fasanella@mfasanella.de" class="hover:text-indigo-600" style="color: var(--text-primary)">massimo.fasanella@mfasanella.de</a>
                                     </p>
                                 </div>
                             </div>
@@ -557,7 +557,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold mb-1">WhatsApp</h4>
-                                    <p class="text-gray-600">
+                                    <p  style="color: var(--text-primary)">
                                         <a href="https://wa.me/49123456789" class="hover:text-indigo-600 flex items-center">
                                             <i class="fab fa-whatsapp text-green-500 mr-2"></i>
                                             +49 123 456789
@@ -572,7 +572,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold mb-1">Arbeitszeiten</h4>
-                                    <p class="text-gray-600">Mo-Fr: 09:00 - 18:00 Uhr<br>Sa-So: Geschlossen</p>
+                                    <p style="color: var(--text-primary)">Mo-Fr: 09:00 - 18:00 Uhr<br>Sa-So: Geschlossen</p>
                                 </div>
                             </div>
                         </div>

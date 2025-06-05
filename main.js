@@ -1,31 +1,37 @@
-    // Mobile menu toggle
+// ===============================
+// Mobile Menü Umschalten (Hamburger-Button)
+// ===============================
 document.getElementById('mobile-menu-button').addEventListener('click', function() {
     const menu = document.getElementById('mobile-menu');
     menu.classList.toggle('hidden');
 });
 
-// Smooth scrolling for navigation links
+// ===============================
+// Smooth Scrolling für Navigation
+// ===============================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        
+
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
-        
+
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 80,
+                top: targetElement.offsetTop - 80, // Abstand zur festen Navigation
                 behavior: 'smooth'
             });
-            
-            // Close mobile menu if open
+
+            // Mobile Menü schließen, falls offen
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.add('hidden');
         }
     });
 });
 
-// Load particles.js dynamically
+// ===============================
+// Particles.js nur auf großen Bildschirmen laden
+// ===============================
 function loadParticlesJS() {
     const script = document.createElement('script');
     script.src = './particle.js';
@@ -139,19 +145,19 @@ function loadParticlesJS() {
     document.head.appendChild(script);
 }
 
-// Only load particles.js on larger screens
-if (window.innerWidth > 768) {
-    loadParticlesJS();
-}
+loadParticlesJS();
 
-// Animation on scroll
+
+// ===============================
+// Karten-Animation beim Scrollen
+// ===============================
 function animateOnScroll() {
     const elements = document.querySelectorAll('.card-hover-effect');
-    
+
     elements.forEach(element => {
         const elementPosition = element.getBoundingClientRect().top;
         const screenPosition = window.innerHeight / 1.3;
-        
+
         if (elementPosition < screenPosition) {
             element.style.opacity = '1';
             element.style.transform = 'translateY(0)';
@@ -159,40 +165,51 @@ function animateOnScroll() {
     });
 }
 
-// Initial call and event listener
+// Event Listener für Scroll und Initialisierung
 window.addEventListener('scroll', animateOnScroll);
 animateOnScroll();
 
-// Set initial opacity for animated elements
+// Anfangszustand für animierte Karten setzen
 document.querySelectorAll('.card-hover-effect').forEach(el => {
     el.style.opacity = '0';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    if (el.classList.contains('card-hover-effect')) {
-        el.style.transform = 'translateY(20px)';
-    }
+    el.style.transform = 'translateY(20px)';
 });
-// Dark mode functionality
+
+// ===============================
+// Dark Mode Funktionalität
+// ===============================
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-// Check for saved preference or use system preference
-const currentTheme = localStorage.getItem('theme') || 
-                    (prefersDarkScheme.matches ? 'dark' : 'light');
+// Prüfen, ob ein Theme gespeichert ist oder System-Theme nutzen
+const currentTheme = localStorage.getItem('theme') ||
+    (prefersDarkScheme.matches ? 'dark' : 'light');
 if (currentTheme === 'dark') {
     document.documentElement.classList.add('dark');
 }
 
-// Toggle dark mode
+// Umschalten zwischen Dark/Light Mode
 darkModeToggle.addEventListener('click', function() {
     const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
     document.documentElement.classList.toggle('dark');
     localStorage.setItem('theme', newTheme);
 });
 
-// Watch for system preference changes
+// System-Theme-Änderungen beobachten
 prefersDarkScheme.addEventListener('change', e => {
     const newTheme = e.matches ? 'dark' : 'light';
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
     localStorage.setItem('theme', newTheme);
 });
+
+/*
+    Was macht dieser Code?
+    - Das mobile Menü wird per Button ein- und ausgeblendet (Tailwind: .hidden, .md:hidden).
+    - Navigation-Links scrollen sanft zu den jeweiligen Abschnitten.
+    - Partikel-Hintergrund (particles.js) wird nur auf großen Bildschirmen geladen.
+    - Karten mit .card-hover-effect werden beim Scrollen mit Fade/Slide-In animiert.
+    - Dark Mode kann per Button umgeschaltet werden und merkt sich die Einstellung im Browser.
+    - Tailwind-Klassen wie .hidden, .md:hidden, .card-hover-effect, .dark usw. steuern das Layout, Animationen und Farbschema.
+*/
 

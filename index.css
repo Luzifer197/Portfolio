@@ -1,5 +1,5 @@
 /* Dark mode configuration */
-:root {
+.root {
     --bg-primary: #FEF9FF;
     --text-primary: #293133;
     --text-secondary: #525252;

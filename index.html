@@ -8,35 +8,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body class="font-sans antialiased bg-[var(--bg-primary)] text-[var(--text-primary)]">
     <!-- Particle JS (will be loaded dynamically) -->
     <div id="particles-js"></div>
     
     <!-- Navigation -->
-    <nav class="navbar fixed w-full py-4 px-6 z-50 bg-white/80 shadow-sm">
+    <nav class="navbar fixed w-full py-4 px-6 z-50 shadow-sm" style="background-color: var(--nav-bg)">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl font-bold gradient-text">DEV<span class="text-gray-800">Portfolio</span></a>
             
             <div class="hidden md:flex space-x-8">
-                <a href="#home" class="animated-border px-1 py-2 text-gray-700 hover:text-indigo-600 transition">Home</a>
-                <a href="#about" class="animated-border px-1 py-2 text-gray-700 hover:text-indigo-600 transition">Über mich</a>
-                <a href="#skills" class="animated-border px-1 py-2 text-gray-700 hover:text-indigo-600 transition">Skills</a>
-                <a href="#projects" class="animated-border px-1 py-2 text-gray-700 hover:text-indigo-600 transition">Projekte</a>
-                <a href="#contact" class="animated-border px-1 py-2 text-gray-700 hover:text-indigo-600 transition">Kontakt</a>
+                <a href="#home" class="animated-border px-1 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Home</a>
+                <a href="#about" class="animated-border px-1 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Über mich</a>
+                <a href="#skills" class="animated-border px-1 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Skills</a>
+                <a href="#projects" class="animated-border px-1 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Projekte</a>
+                <a href="#contact" class="animated-border px-1 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Kontakt</a>
             </div>
             
-            <button id="mobile-menu-button" class="md:hidden text-gray-700">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
+            <div class="flex items-center">
+                <button id="dark-mode-toggle" class="mr-4 text-gray-700 dark:text-gray-300">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 dark:text-gray-300">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
         </div>
         
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white rounded-lg shadow-lg mt-4 py-2">
-            <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Home</a>
-            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Über mich</a>
-            <a href="#skills" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Skills</a>
-            <a href="#projects" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Projekte</a>
-            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Kontakt</a>
+            <a href="#home" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-indigo-900/30">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-indigo-900/30">Über mich</a>
+            <a href="#skills" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-indigo-900/30">Skills</a>
+            <a href="#projects" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-indigo-900/30">Projekte</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-indigo-900/30">Kontakt</a>
         </div>
     </nav>
     
@@ -83,7 +89,7 @@
     </section>
     
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20" style="background-color: var(--section-bg)">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
                 <span class="gradient-text">Über mich</span>
@@ -160,7 +166,7 @@
     </section>
     
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-50">
+    <section id="skills" class="py-20" style="background-color: var(--bg-primary)">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
                 <span class="gradient-text">Meine Skills</span>
@@ -169,9 +175,9 @@
                 Eine Auswahl der Technologien und Werkzeuge, mit denen ich arbeite, um moderne Webanwendungen zu erstellen.
             </p>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8" style="background-color: var(--bg-primary)">
                 <!-- Frontend Skills -->
-                <div class="bg-white p-6 rounded-xl shadow-md card-hover-effect">
+                <div class="p-6 rounded-xl shadow-md card-hover-effect">
                     <div class="text-indigo-600 text-4xl mb-4">
                         <i class="fas fa-laptop-code"></i>
                     </div>
@@ -201,7 +207,7 @@
                 </div>
 
                 <!-- Template & Backend Skills -->
-                <div class="bg-white p-6 rounded-xl shadow-md card-hover-effect">
+                <div class="p-6 rounded-xl shadow-md card-hover-effect">
                     <div class="text-indigo-600 text-4xl mb-4">
                         <i class="fas fa-file-code"></i>
                     </div>
@@ -221,10 +227,9 @@
                         </li>
                     </ul>
                 </div>
-                
-                
+                           
                 <!-- Tools & More -->
-                <div class="bg-white p-6 rounded-xl shadow-md card-hover-effect">
+                <div class="p-6 rounded-xl shadow-md card-hover-effect">
                     <div class="text-indigo-600 text-4xl mb-4">
                         <i class="fas fa-tools"></i>
                     </div>
@@ -254,7 +259,7 @@
                 </div>
                 
                 <!-- Design Skills -->
-                <div class="bg-white p-6 rounded-xl shadow-md card-hover-effect">
+                <div class="p-6 rounded-xl shadow-md card-hover-effect">
                     <div class="text-indigo-600 text-4xl mb-4">
                         <i class="fas fa-paint-brush"></i>
                     </div>
@@ -285,7 +290,7 @@
             </div>
             
             <!-- Skill Bars -->
-            <div class="mt-16 bg-white p-8 rounded-xl shadow-md">
+            <div class="mt-16 p-8 rounded-xl shadow-md">
                 <h3 class="font-bold text-xl mb-6">Meine Stärken</h3>
                 <div class="space-y-6">
                     <div>
@@ -321,7 +326,7 @@
     </section>
     
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white">
+    <section id="projects" class="py-20" style="background-color: var(--section-bg)">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
                 <span class="gradient-text">Meine Projekte</span>
@@ -482,7 +487,7 @@
     </section>
     
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <section id="contact" class="py-20">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
                 <span class="gradient-text">Kontakt aufnehmen</span>
@@ -491,9 +496,9 @@
                 Haben Sie ein Projekt, an dem wir zusammenarbeiten können? Schreiben Sie mir eine Nachricht und ich melde mich innerhalb von 24 Stunden bei Ihnen.
             </p>
             
-            <div class="flex flex-col md:flex-row">
+            <div class="flex flex-col md:flex-row" >
                 <div class="md:w-1/2 mb-12 md:mb-0 md:pr-8">
-                    <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="p-8 rounded-xl shadow-md">
                         <h3 class="font-bold text-xl mb-6">Schreiben Sie mir</h3>
                         <form>
                             <div class="mb-4">
@@ -520,7 +525,7 @@
                 </div>
                 
                 <div class="md:w-1/2 md:pl-8">
-                    <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                    <div class="p-8 rounded-xl shadow-md h-full">
                         <h3 class="font-bold text-xl mb-6">Kontaktinformationen</h3>
                         
                         <div class="space-y-6">
@@ -596,7 +601,7 @@
     </section>
     
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="py-12 text-white" style="background-color: var(--footer-bg)">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>

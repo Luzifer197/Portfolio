@@ -1,3 +1,33 @@
+/* Dark mode configuration */
+:root {
+    --bg-primary: #FEF9FF;
+    --text-primary: #293133;
+    --text-secondary: #525252;
+    --card-bg: #FFFFFF;
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --section-bg: #FFFFFF;
+    --footer-bg: #27292B;
+}
+.dark {
+    --bg-primary: #27292B;
+    --text-primary: #FFFFFF;
+    --text-secondary: #FEF9FF;
+    --card-bg: #293133;
+    --nav-bg: rgba(39, 41, 43, 0.8);
+    --section-bg: #27292B;
+    --footer-bg: #1A1C1E;
+}
+
+/* Apply root variables */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.bg-dark{
+    background-color: var(--bg-primary);
+}
+
 /* Custom CSS for special effects */
 .gradient-text {
     background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);

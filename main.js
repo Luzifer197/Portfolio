@@ -1,4 +1,4 @@
-        // Mobile menu toggle
+            // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
@@ -170,4 +170,28 @@
             if (el.classList.contains('card-hover-effect')) {
                 el.style.transform = 'translateY(20px)';
             }
+        });
+        // Dark mode functionality
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Check for saved preference or use system preference
+        const currentTheme = localStorage.getItem('theme') || 
+                           (prefersDarkScheme.matches ? 'dark' : 'light');
+        if (currentTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+        
+        // Toggle dark mode
+        darkModeToggle.addEventListener('click', function() {
+            const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', newTheme);
+        });
+        
+        // Watch for system preference changes
+        prefersDarkScheme.addEventListener('change', e => {
+            const newTheme = e.matches ? 'dark' : 'light';
+            document.documentElement.classList.toggle('dark', newTheme === 'dark');
+            localStorage.setItem('theme', newTheme);
         });

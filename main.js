@@ -146,7 +146,7 @@ if (window.innerWidth > 768) {
 
 // Animation on scroll
 function animateOnScroll() {
-    const elements = document.querySelectorAll('.card-hover-effect, .gradient-text');
+    const elements = document.querySelectorAll('.card-hover-effect');
     
     elements.forEach(element => {
         const elementPosition = element.getBoundingClientRect().top;
@@ -164,7 +164,7 @@ window.addEventListener('scroll', animateOnScroll);
 animateOnScroll();
 
 // Set initial opacity for animated elements
-document.querySelectorAll('.card-hover-effect, .gradient-text').forEach(el => {
+document.querySelectorAll('.card-hover-effect').forEach(el => {
     el.style.opacity = '0';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     if (el.classList.contains('card-hover-effect')) {

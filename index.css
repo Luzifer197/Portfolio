@@ -1,181 +1,74 @@
-:root {
-    --antrazitgrau: #293133;
-    --antrazitgrauBild: #293133b9;
-    --ghostwhite: #fef9ff;
-    --snowwhite: #FFFAFA;
-    --graphitblack: #27292B;
-    --grey: #787878;
-    --darkgray: rgba(172, 170, 170, 0.305);
+/* Custom CSS for special effects */
+.gradient-text {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
-/* Navbar */
+.card-hover-effect {
+    transition: all 0.3s ease;
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
 .navbar {
-    transition: all 0.6s;
+    backdrop-filter: blur(10px);
 }
 
-.topnavigator {
-    margin: auto;
-    height: 4rem;
-    z-index: 10;
+.hero-pattern {
+    background-image: radial-gradient(circle, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
 }
 
-.navbaronhover {
-    display: inline-block;
+/* Particle JS container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.content-over-particle {
+    position: relative;
+    z-index: 1;
+}
+
+/* Custom animated border */
+.animated-border {
     position: relative;
 }
 
-.navbaronhover::after {
+.animated-border::after {
     content: '';
     position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
     bottom: 0;
     left: 0;
-    background-color: var(--ghostwhite);
-    transform-origin: bottom left;
-    transition: transform 0.25s ease-out;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    transition: width 0.3s ease;
 }
 
-.navbaronhover:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    transition: transform 0.3s;
-}
-
-/* Social Media */
-.link-to-social {
-    width: 10rem;
-    height: 3rem;
-    padding-right: 1.5rem;
-}
-
-.flex-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
+.animated-border:hover::after {
     width: 100%;
 }
 
-.flex-children {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-.roundBackground {
-    border-radius: 50%;
-    border-color: var(--darkgray);
-    border-style: solid;
-    border-width: 10pt;
-    z-index: 2;
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 
-.socialmedia-icons {
-    z-index: 1;
-    position: absolute;
-}
-
-/* Sidebar */
-.s-sidebar__trigger {
-    z-index: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 30%;
-    height: 100%;
-}
-
-.sidebar {
-    width: 23rem;
-    height: 100vh;
-    position: fixed;
-    margin-left: auto;
-    float: right;
-    transition: right left 0.6s;
-}
-
-.sidebaritem-on_over:hover {
-    -webkit-text-fill-color: var(--grey);
-    transition: all 0.3s;
-}
-
-/* Logo */
-.logo {
-    background-position-y: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url('./assets/LogoWithTextAside.svg');
-    width: 10rem;
-    height: 3rem;
-    margin-left: 1.5rem;
-    transition: all 0.6s
-}
-
-.logowhilescrolling {
-    background-position-y: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url('./assets/LogoWithText.svg');
-    width: 10rem;
-    height: 3rem;
-    margin-left: 1.5rem;
-    transition: all 0.6s
-}
-
-/* Header */
-.header {
-    width: 50rem;
-    margin-top: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    -webkit-text-fill-color: var(--ghostwhite);
-}
-
-.Header>h1,
-.Header>h2 {
-    font-weight: bold;
-}
-
-.bg-picture {
-    background-image: -webkit-image-set('./assets/abidat-nuernberg-kl.jpg');
-    background-color: var(--antrazitgrauBild);
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    padding-top: 5rem;
-    padding-bottom: 10rem;
-    border: none;
-}
-
-/* Contant-Container */
-.h3 {
-    -webkit-text-fill-color: var(--antrazitgrau);
-}
-
-.sektion {
-    width: 40vw;
-    padding-top: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-@media (orientation: portrait) {
-    .bg-picture {
-        background-image: -webkit-image-set('./assets/abidat-nuernberg-kl.jpg');
-        background-color: var(--antrazitgrauBild);
-        background-blend-mode: multiply;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position-x: -10%;
-        width: 100vh;
-        height: 50vh;
-        padding-top: 5rem;
-        padding-bottom: 10rem;
-        border: none;
-}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#3b82f6, #8b5cf6);
+    border-radius: 10px;
 }

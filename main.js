@@ -207,7 +207,7 @@ prefersDarkScheme.addEventListener('change', e => {
     Was macht dieser Code?
     - Das mobile Menü wird per Button ein- und ausgeblendet (Tailwind: .hidden, .md:hidden).
     - Navigation-Links scrollen sanft zu den jeweiligen Abschnitten.
-    - Partikel-Hintergrund (particles.js) wird nur auf großen Bildschirmen geladen.
+    - Partikel-Hintergrund (particles.js) wird geladen.
     - Karten mit .card-hover-effect werden beim Scrollen mit Fade/Slide-In animiert.
     - Dark Mode kann per Button umgeschaltet werden und merkt sich die Einstellung im Browser.
     - Tailwind-Klassen wie .hidden, .md:hidden, .card-hover-effect, .dark usw. steuern das Layout, Animationen und Farbschema.

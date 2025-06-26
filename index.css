@@ -1,60 +1,165 @@
-/* Dark mode configuration */
-.root {
-  --bg-primary: #FEF9FF;
-  --text-primary: #293133;
-  --text-secondary: #525252;
-  --card-bg: #FFFFFF;
-  --nav-bg: rgba(255, 255, 255, 0.8);
-  --section-bg: #FFFFFF;
-  --footer-bg: #27292B;
-}
 
-.dark {
-  --bg-primary: #27292B;
-  --text-primary: #FFFFFF;
-  --text-secondary: #FEF9FF;
-  --card-bg: #293133;
-  --nav-bg: rgba(39, 41, 43, 0.8);
-  --section-bg: #27292B;
-  --footer-bg: #1A1C1E;
-}
+html{
 
-/* Apply root variables */
-body {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  background: linear-gradient(to right, #00f5a0, #00d9f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+#background {
+  position: fixed;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
 }
 
-/* Navbar */
-.navbar {
-  background-color: var(--nav-bg);
+.text-shadow {
+  text-shadow: 1px 1px 4px black;
 }
 
-/* Footer */
-footer {
-  background-color: var(--footer-bg);
-  color: var(--text-primary);
+
+/* Basis-Design (Desktop ab 992px) */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  width: 90%;
+  margin: 0 auto;
 }
 
-/* Karten, Sections */
-.card {
-  background-color: var(--card-bg);
-  color: var(--text-primary);
+.header {
+  width: 50rem;
+  margin: 10rem auto;
+  text-align: center;
 }
 
-/* Sektionen */
-section {
-  background-color: var(--section-bg);
-  color: var(--text-primary);
+.header > h1,
+.header > h2 {
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  html{
+    scrollbar-width: none;
+  }
+
+  .header {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 25vh;
+    min-height: 40vh;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .header h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* 📲 Tablet Optimierung: 768px–991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .header {
+    width: 90%;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+section{
+    padding-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: darkblue;
+    border-radius: 24px;
+}
+
+.glass-card {
+  background: rgba(0, 0, 0, 0.199); /* halbtransparentes Schwarz */
+  backdrop-filter: blur(10px);    /* Hintergrund verschwommen */
+  -webkit-backdrop-filter: blur(10px); /* für Safari */
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.icon:hover {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.icon {
+  font-size: 40px;
+  font-weight: bold;
+  color: #00f5a0;
+}
+
+.fade-slide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.splide__slide.is-active.fade-slide {
+  opacity: 1;
+}
+
+.text-underline-hover {
+    text-decoration: none;
+}
+
+.ribbon {
+  width: 180px;
+  height: 180px;
+  overflow: visible; /* Wichtig, damit das Banner nicht abgeschnitten wird */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 250px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 35px;
+  background: #6610f2; /* Bootstrap Indigo */
+  color: white;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: bold;
+  transform: rotate(45deg);
+  top: 25px;
+  right: -60px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  white-space: nowrap; /* Text bleibt in einer Zeile */
 }

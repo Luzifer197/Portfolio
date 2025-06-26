@@ -32,6 +32,7 @@ if (getDeviceType() === "desktop") {
     const randomImage = images[Math.floor(Math.random() * images.length)];
     document.getElementById('background').style.backgroundImage = `url('${randomImage}')`;
 } else if (getDeviceType() === "mobile") {
+        document.getElementById('offcanvasNavbar').classList.add('glass-card');
         const images = [
         'assets/background/mobile/824062.jpg',
         'assets/background/mobile/1582100.jpg',

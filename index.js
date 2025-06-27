@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     autoplay: true,
     interval: 4000,
     arrows: true,
-    pagination: true,
+    pagination: false,
     breakpoints: {
       992: { perPage: 2 },
       768: { perPage: 1 }

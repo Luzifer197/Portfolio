@@ -96,8 +96,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 document.addEventListener('DOMContentLoaded', function () {
+  var type = null;
+  if (getDeviceType() === "mobile") {
+    type = 'fade';
+  } else {
+    type = 'loop';
+  }
+
   new Splide('#project-slider', {
-    type: 'loop',
+    type: type,
     perPage: 3,
     gap: '1rem',
     autoplay: true,

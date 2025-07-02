@@ -14,8 +14,6 @@ function getDeviceType() {
 if (getDeviceType() === "desktop") {
     const images = [
         'assets/background/desktop/45753-neu-dunkle-hintergrundbilder-hd-1920x1080-ipad-pro.jpg',
-        'assets/background/desktop/45767-dunkle-hintergrundbilder-hd-1920x1080-fuer-mac.jpg',
-        'assets/background/desktop/45783-dunkle-hintergrundbilder-hd-1920x1080-smartphone.jpg',
         'assets/background/desktop/45877-amazing-dunkle-hintergrundbilder-hd-1920x1080-windows-7.jpg',
         'assets/background/desktop/45880-dunkle-hintergrundbilder-hd-1920x1080-ios.jpg',
         'assets/background/desktop/45887-beliebt-dunkle-hintergrundbilder-hd-1920x1080-mobile.jpg',
@@ -23,11 +21,8 @@ if (getDeviceType() === "desktop") {
         'assets/background/desktop/45941-dunkle-hintergrundbilder-hd-1920x1080-lockscreen.jpg',
         'assets/background/desktop/45944-beste-dunkle-hintergrundbilder-hd-1920x1200-hd.jpg',
         'assets/background/desktop/45955-dunkle-hintergrundbilder-hd-1920x1080-fuer-desktop.jpg',
-        'assets/background/desktop/45959-neu-dunkle-hintergrundbilder-hd-1920x1080-fuer-retina.jpg',
         'assets/background/desktop/45962-full-size-dunkle-hintergrundbilder-hd-3840x2160-fuer-tablet.jpg',
         'assets/background/desktop/45966-dunkle-hintergrundbilder-hd-1920x1080-fuer-ipad-mini-retina.jpg',
-        'assets/background/desktop/46031-beste-dunkle-hintergrundbilder-hd-1920x1080.jpg',
-        'assets/background/desktop/46040-schoen-dunkle-hintergrundbilder-hd-1920x1080-fuer-retina.jpg',
     ];
     const randomImage = images[Math.floor(Math.random() * images.length)];
     document.getElementById('background').style.backgroundImage = `url('${randomImage}')`;
@@ -50,9 +45,7 @@ if (getDeviceType() === "desktop") {
         'assets/background/mobile/7826758.jpg',
         'assets/background/mobile/1565113.jpeg',
         'assets/background/mobile/83365465.jpeg',
-        'assets/background/mobile/821354131.jpeg',
         'assets/background/mobile/831651665.jpeg',
-        'assets/background/mobile/8324546551.jpeg',
         'assets/background/mobile/913554.jpeg',
         'assets/background/mobile/81321.jpeg',
         'assets/background/mobile/6544845151545.jpeg',

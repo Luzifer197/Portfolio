@@ -16,7 +16,6 @@ if (getDeviceType() === "desktop") {
         'assets/background/desktop/45753-neu-dunkle-hintergrundbilder-hd-1920x1080-ipad-pro.jpg',
         'assets/background/desktop/45877-amazing-dunkle-hintergrundbilder-hd-1920x1080-windows-7.jpg',
         'assets/background/desktop/45880-dunkle-hintergrundbilder-hd-1920x1080-ios.jpg',
-        'assets/background/desktop/45887-beliebt-dunkle-hintergrundbilder-hd-1920x1080-mobile.jpg',
         'assets/background/desktop/45902-amazing-dunkle-hintergrundbilder-hd-1920x1080-retina.jpg',
         'assets/background/desktop/45941-dunkle-hintergrundbilder-hd-1920x1080-lockscreen.jpg',
         'assets/background/desktop/45944-beste-dunkle-hintergrundbilder-hd-1920x1200-hd.jpg',

@@ -1,0 +1,22 @@
+<svg width="364" height="332" viewBox="0 0 364 332" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Rahmenlinien in Verlaufsfarben -->
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f2a9"/>
+      <stop offset="100%" stop-color="#00c4ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rahmen (4 Ecken mit Linien) -->
+  <path d="M50 80 V50 H130" stroke="url(#grad)" stroke-width="4"/>
+  <path d="M314 80 V50 H234" stroke="url(#grad)" stroke-width="4"/>
+  <path d="M50 252 V282 H130" stroke="url(#grad)" stroke-width="4"/>
+  <path d="M314 252 V282 H234" stroke="url(#grad)" stroke-width="4"/>
+
+  <!-- MF Text -->
+  <text x="50%" y="160" font-size="80" font-family="Arial, sans-serif" font-weight="bold" fill="url(#grad)" text-anchor="middle" dominant-baseline="middle">MF</text>
+
+  <!-- Name in Grau darunter -->
+  <text x="50%" y="210" font-size="20" font-family="Arial, sans-serif" fill="#C0C0C0" text-anchor="middle">MASSIMO</text>
+  <text x="50%" y="235" font-size="20" font-family="Arial, sans-serif" fill="#C0C0C0" text-anchor="middle">FASANELLA</text>
+</svg>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Massimo Fasanella</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./assets/fontawesome/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/splide/dist/css/splide-core.min.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="icon" type="image/svg+xml" href="./assets/logo_mf_without_text.svg" />
+</head>
+
+<body class="bg-dark text-white">
+  <div id="background"></div>
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-dark">
+      <div class="container-fluid d-flex align-items-center">
+
+        <!-- Branding -->
+        <a href="#home" class="navbar-brand d-flex align-items-center mb-0">
+          <img src="./assets/logo_mf_with_text.svg" alt="Massimo Fasanella Logo" height="48" style="max-height: 48px;">
+        </a>
+
+        <!-- Buttons Wrapper -->
+        <div class="d-flex align-items-center order-2 order-xl-1">
+          <!-- Burger -->
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="fas fa-bars"></span>
+          </button>
+        </div>
+
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-end text-white" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
+            <ul class="navbar-nav text-center">
+              <li class="nav-item"><a href="#home" class="nav-link text-white">Startseite</a></li>
+              <li class="nav-item"><a href="#me" class="nav-link text-white">Über mich</a></li>
+              <li class="nav-item"><a href="#skills" class="nav-link text-white">Skills</a></li>
+              <li class="nav-item"><a href="#projects" class="nav-link text-white">Projekte</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="text-center min-vh-75">
+    <!-- Start Section -->
+    <section id="home" class="header">
+      <div id="container">
+        <h1 class="text-shadow" id="quote"></h1>
+      </div>
+    </section>
+
+    <!-- Über mich Section -->
+    <section id="me" class="py-5 text-white">
+      <div class="container">
+        <div class="glass-card">
+
+          <!-- Überschrift -->
+          <h3 class="h3 fw-bold gradient-text text-center mb-5">Über mich</h3>
+
+          <!-- Textblock -->
+          <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+              <p class="text-white-50 text-md-start text-sm-start">
+                Ich bin Webentwickler mit Fokus auf moderne, performante Frontends.
+                Ich arbeite mit HTML, CSS, JavaScript und PHP – pur oder mit Frameworks wie React, Angular oder Flask.
+                Zusätzlich bringe ich Erfahrung mit Template-Engines wie Smarty und Liquid mit.
+                Mein Ziel: saubere, responsive und benutzerfreundliche Lösungen.
+              </p>
+            </div>
+          </div>
+
+          <!-- Merkmale -->
+          <div class="row text-center">
+            <div class="col-md-3 mb-4">
+              <i class="fas fa-lightbulb fa-lg icon mb-5"></i>
+              <h6 class="fw-bold">Kreatives Denken</h6>
+              <p class="text-white-50 small ">Innovative Ansätze für komplexe Herausforderungen</p>
+            </div>
+            <div class="col-md-3 mb-4">
+              <i class="fas fa-laptop-code fa-lg icon mb-5"></i>
+              <h6 class="fw-bold">Moderne Technologien</h6>
+              <p class="text-white-50 small">React, Angular, Flask, Smarty, Liquid</p>
+            </div>
+            <div class="col-md-3 mb-4">
+              <i class="fas fa-tachometer-alt fa-lg icon mb-5"></i>
+              <h6 class="fw-bold">Hohe Leistung</h6>
+              <p class="text-white-50 small">Fokus auf Performance und Effizienz</p>
+            </div>
+            <div class="col-md-3 mb-4">
+              <i class="fas fa-mobile-alt fa-lg icon mb-5"></i>
+              <h6 class="fw-bold">Responsive Design</h6>
+              <p class="text-white-50 small">Perfekte Darstellung auf allen Geräten</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 text-white">
+      <div class="container">
+        <div class="glass-card">
+          <h3 class="h3 fw-bold gradient-text text-center mb-5">Skills</h3>
+
+          <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+              <p class="text-white-50 text-md-start text-sm-start">
+                Eine Auswahl der Technologien und Werkzeuge, mit denen ich arbeite, um moderne Webanwendungen zu
+                erstellen.
+              </p>
+            </div>
+          </div>
+
+          <!-- Desktop: Grid mit 4 Spalten -->
+          <div class="d-none d-md-flex row text-center text-white-50">
+            <!-- Block 1 -->
+            <div class="col-md-3 mb-4">
+              <i class="fas fa-laptop-code fa-2x mb-3 icon"></i>
+              <h5 class="fw-bold text-white">Frontend</h5>
+              <ul class="list-unstyled text-start ps-4">
+                <li><i class="fab fa-html5 text-orange-500 me-2"></i>HTML5</li>
+                <li><i class="fab fa-css3-alt text-blue-500 me-2"></i>CSS3</li>
+                <li><i class="fab fa-js text-yellow-500 me-2"></i>JavaScript</li>
+                <li><i class="fas fa-code text-purple-500 me-2"></i>TypeScript</li>
+              </ul>
+            </div>
+
+            <!-- Block 2 -->
+            <div class="col-md-3 mb-4">
+              <i class="fas fa-file-code fa-2x mb-3 icon"></i>
+              <h5 class="fw-bold text-white">Frameworks</h5>
+              <ul class="list-unstyled text-start ps-4">
+                <li><i class="fab fa-php text-purple-600 me-2"></i>PHP</li>
+                <li><i class="fas fa-file-code text-green-500 me-2"></i>Smarty</li>
+                <li><i class="fas fa-file-code text-blue-500 me-2"></i>Bootstrap</li>
+                <li><i class="fab fa-react text-blue-400 me-2"></i>React</li>
+              </ul>
+            </div>
+
+            <!-- Block 3 -->
+            <div class="col-md-3 mb-4">
+              <i class="fas fa-tools fa-2x mb-3 icon"></i>
+              <h5 class="fw-bold text-white">Tools & More</h5>
+              <ul class="list-unstyled text-start ps-4">
+                <li><i class="fab fa-git-alt text-orange-600 me-2"></i>Git</li>
+                <li><i class="fab fa-npm text-red-500 me-2"></i>NPM</li>
+                <li><i class="fab fa-docker text-blue-400 me-2"></i>Docker</li>
+              </ul>
+            </div>
+
+            <!-- Block 4 -->
+            <div class="col-md-3 mb-4">
+              <i class="fas fa-paint-brush fa-2x mb-3 icon"></i>
+              <h5 class="fw-bold text-white">Design</h5>
+              <ul class="list-unstyled text-start ps-4">
+                <li><i class="fas fa-pencil-ruler text-pink-500 me-2"></i>UI/UX</li>
+                <li><i class="fas fa-mobile-alt text-blue-300 me-2"></i>Responsive</li>
+                <li><i class="fas fa-bolt text-yellow-500 me-2"></i>Animation</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Mobile: Splide Slider -->
+          <div class="d-md-none">
+            <div class="splide" id="skills-slider">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <!-- Block Template -->
+                  <li class="splide__slide text-center">
+                    <i class="fas fa-laptop-code fa-2x mb-3 icon"></i>
+                    <h5 class="fw-bold text-white">Frontend</h5>
+                    <ul class="list-unstyled text-start ps-4">
+                      <li><i class="fab fa-html5 text-orange-500 me-2"></i>HTML5</li>
+                      <li><i class="fab fa-css3-alt text-blue-500 me-2"></i>CSS3</li>
+                      <li><i class="fab fa-js text-yellow-500 me-2"></i>JavaScript</li>
+                      <li><i class="fas fa-code text-purple-500 me-2"></i>TypeScript</li>
+                    </ul>
+                  </li>
+
+                  <li class="splide__slide text-center">
+                    <i class="fas fa-file-code fa-2x mb-3 icon"></i>
+                    <h5 class="fw-bold text-white">Frameworks</h5>
+                    <ul class="list-unstyled text-start ps-4">
+                      <li><i class="fab fa-php text-purple-600 me-2"></i>PHP</li>
+                      <li><i class="fas fa-file-code text-green-500 me-2"></i>Smarty</li>
+                      <li><i class="fas fa-file-code text-blue-500 me-2"></i>Bootstrap</li>
+                      <li><i class="fab fa-react text-blue-400 me-2"></i>React</li>
+                    </ul>
+                  </li>
+
+                  <li class="splide__slide text-center">
+                    <i class="fas fa-tools fa-2x mb-3 icon"></i>
+                    <h5 class="fw-bold text-white">Tools & More</h5>
+                    <ul class="list-unstyled text-start ps-4">
+                      <li><i class="fab fa-git-alt text-orange-600 me-2"></i>Git</li>
+                      <li><i class="fab fa-npm text-red-500 me-2"></i>NPM</li>
+                      <li><i class="fab fa-docker text-blue-400 me-2"></i>Docker</li>
+                    </ul>
+                  </li>
+
+                  <li class="splide__slide text-center">
+                    <i class="fas fa-paint-brush fa-2x mb-3 icon"></i>
+                    <h5 class="fw-bold text-white">Design</h5>
+                    <ul class="list-unstyled text-start ps-4">
+                      <li><i class="fas fa-pencil-ruler text-pink-500 me-2"></i>UI/UX</li>
+                      <li><i class="fas fa-mobile-alt text-blue-300 me-2"></i>Responsive</li>
+                      <li><i class="fas fa-bolt text-yellow-500 me-2"></i>Animation</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-5 text-white">
+      <div class="container">
+        <div class="glass-card">
+
+          <!-- Überschrift -->
+          <h3 class="h3 fw-bold gradient-text text-center mb-5">Projekte</h3>
+
+          <!-- Beschreibung -->
+          <div class="row justify-content-center mb-4">
+            <div class="col-lg-10">
+              <p class="text-white-50 text-md-start text-sm-start">
+                Hier ist eine Auswahl meiner Projekte, um meine Fähigkeiten sowie meine Expertise zu zeigen.
+              </p>
+            </div>
+          </div>
+
+          <!-- Splide Slider -->
+          <div class="splide" id="project-slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+
+                <!-- Projekt 1 -->
+                                 <li class="splide__slide">
+                  <div class="rounded-xl overflow-hidden shadow-lg card-hover-effect text-dark">
+                    <div style="height: 240px; overflow: hidden; position: relative;">
+                      <img src="assets/projects/Productscape.png" alt="Projekt"
+                        class="img-fluid w-100 h-100 object-fit-cover transition-transform duration-500 hover:scale-110"
+                        style="object-fit: cover;">
+                      <div class="position-absolute top-0 start-0 w-100 h-100"
+                        style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+                      <div class="ribbon ribbon-top-right">
+                        <span class="text-center">Private Code</span>
+                      </div>
+                    </div>
+                    <div class="p-4 text-white-50">
+                      <h5 class="fw-bold text-white mb-2">Infinilink</h5>
+                      <p class="text-white-50 mb-3 ">
+                        Ein Excel Plugin, dass das Verwalten von Artikel für JTL-Shop über Excel erfolgen kann und nicht
+                        über das schwernutzbare JTL-WaWi nutzen muss.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="rounded-xl overflow-hidden shadow-lg card-hover-effect text-dark">
+                    <div style="height: 240px; overflow: hidden; position: relative;">
+                      <img src="assets/projects/Productscape.png" alt="Projekt"
+                        class="img-fluid w-100 h-100 object-fit-cover transition-transform duration-500 hover:scale-110"
+                        style="object-fit: cover;">
+                      <div class="position-absolute top-0 start-0 w-100 h-100"
+                        style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+                      <div class="ribbon ribbon-top-right">
+                        <span class="text-center">PORTLET FÜR JTL-SHOP</span>
+                      </div>
+                    </div>
+                    <div class="p-4 text-white-50">
+                      <h5 class="fw-bold text-white mb-2">ProductScape</h5>
+                      <p class="text-white-50 mb-3 ">
+                        Ein Bild, das mehrere Artikel zeigt. Die Hotspots verlinken direkt auf Artikel im bestehenden
+                        JTL-Shop (als Liste neben dem Bild).
+                      </p>
+                      <span class="badge bg-info text-dark mt-2">
+                        Kein öffentlicher Quellcode - Einsicht auf Anfrage
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="rounded-xl overflow-hidden shadow-lg card-hover-effect text-dark">
+                    <div style="height: 240px; overflow: hidden; position: relative;">
+                      <img src="assets/projects/ProductscapeWide.png" alt="Projekt"
+                        class="img-fluid w-100 h-100 object-fit-cover transition-transform duration-500 hover:scale-110"
+                        style="object-fit: cover;">
+                      <div class="position-absolute top-0 start-0 w-100 h-100"
+                        style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+                      <div class="ribbon ribbon-top-right">
+                        <span class="text-center">PORTLET FÜR JTL-SHOP</span>
+                      </div>
+                    </div>
+                    <div class="p-4 text-white-50">
+                      <h5 class="fw-bold text-white mb-2">ProductScapeWide</h5>
+                      <p class="text-white-50 mb-3 ">
+                        Ein Bild, das mehrere Artikel zeigt. Die Hotspots verlinken direkt auf Artikel im bestehenden
+                        JTL-Shop (als Tooltipp auf das Bild).
+                      </p>
+                      <span class="badge bg-info text-dark mt-2">
+                        Kein öffentlicher Quellcode - Einsicht auf Anfrage
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="rounded-xl overflow-hidden shadow-lg card-hover-effect text-dark position-relative">
+                    <div style="height: 240px; overflow: hidden; position: relative;">
+                      <img src="assets/projects/Rss-Feed.png" alt="Projekt"
+                        class="img-fluid w-100 h-100 object-fit-cover transition-transform duration-500 hover:scale-110"
+                        style="object-fit: cover;">
+                      <div class="position-absolute top-0 start-0 w-100 h-100"
+                        style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+
+                      <!-- Ribbon -->
+                      <div class="ribbon ribbon-top-right">
+                        <span class="text-center">PORTLET FÜR JTL-SHOP</span>
+                      </div>
+                    </div>
+                    <div class="p-4 text-white-50">
+                      <h5 class="fw-bold text-white mb-2">Rss-Feed Stellenangebote</h5>
+                      <p class="text-white-50 mb-3">
+                        Anzeige eines RSS-Feeds mit Stellenangeboten. Die Anzeige erfolgt als simple Liste, die die
+                        neuesten Angebote darstellt.
+                      </p>
+                      <span class="badge bg-info text-dark mt-2">
+                        Kein öffentlicher Quellcode - Einsicht auf Anfrage
+                      </span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Custom Arrows -->
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev btn btn-outline-light rounded-circle me-2">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="splide__arrow splide__arrow--next btn btn-outline-light rounded-circle">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+  </main>
+
+<footer class="text-white mt-5">
+  <div class="container py-4">
+    <div class="row">
+
+      <!-- Name / Logo -->
+      <div class="col-lg-4 mb-4 mb-lg-0 text-center text-lg-start">
+        <h5 class="fw-bold text-white mb-2">
+          <span class="gradient-text">Massimo</span> <span>Fasanella</span>
+        </h5>
+        <p class="text-white-50 small">Webentwickler &amp; IT-Enthusiast</p>
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-lg-4 mb-4 mb-lg-0 text-center text-lg-start">
+        <h6 class="text-uppercase fw-bold mb-2">Navigation</h6>
+        <ul class="list-unstyled">
+          <li><a href="#home" class="text-decoration-none text-white-50">Startseite</a></li>
+          <li><a href="#me" class="text-decoration-none text-white-50">Über mich</a></li>
+          <li><a href="#skills" class="text-decoration-none text-white-50">Skills</a></li>
+          <li><a href="#projects" class="text-decoration-none text-white-50">Projekte</a></li>
+        </ul>
+      </div>
+
+      <!-- Kontakt / Social -->
+      <div class="col-lg-4 text-center text-lg-start">
+        <h6 class="text-uppercase fw-bold mb-2">Kontakt</h6>
+        <p class="small mb-1">
+          <i class="fas fa-envelope fa-lg me-1"></i>
+          E-Mail:
+          <a href="mailto:massimo.fasanella@mfasanella.de" class="text-white-50 text-decoration-none">
+            massimo.fasanella@mfasanella.de
+          </a>
+        </p>
+        <p class="small mb-2">
+          <i class="fas fa-phone fa-lg me-1"></i>
+          <a href="sms:4915223649767?body=Hi%2C%20hab%20Ihren%20Portfolio%20gesehen%20und%20m%C3%B6chte%20mit%20Ihnen%20zusammen%20arbeiten"
+            target="_blank" rel="noopener" class="text-white-50 text-decoration-none">
+            Schreiben Sie mir eine Nachricht über SMS
+          </a>
+        </p>
+        <p class="small mb-1">
+          <i class="fab fa-whatsapp fa-lg me-1"></i>
+          <a href="https://wa.me/4915223649767?text=Hi%2C%20hab%20Ihren%20Portfolio%20gesehen%20und%20m%C3%B6chte%20mit%20Ihnen%20zusammen%20arbeiten"
+            target="_blank" rel="noopener" class="text-white-50 text-decoration-none">
+            Schreiben Sie mir eine Nachricht über Whatsapp
+          </a>
+        </p>
+        <a href="https://github.com/Luzifer197" target="_blank" rel="noopener" class="me-3 text-white">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mfasanella/" target="_blank" rel="noopener" class="me-3 text-white">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="https://stackoverflow.com/users/22586861/luzifer197" target="_blank" rel="noopener" class="text-white">
+          <i class="fab fa-stack-overflow fa-lg"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="text-secondary text-center py-3 small">
+    &copy; 2025 Massimo Fasanella – Alle Rechte vorbehalten
+  </div>
+</footer>
+
+
+  <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/splide/dist/js/splide.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+  
+  Dark hero section mit bootstrap:
+   <section class="py-5 text-center">
+  <div class="container">
+    <h1 class="display-3 fw-bold text-shadow">Willkommen im Duel Nexus</h1>
+    <p class="lead text-white-50 mb-4">Die ultimative Plattform für Yu-Gi-Oh!-Fans…</p>
+    <a class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">
+      <i class="fas fa-user-plus me-1"></i> Jetzt registrieren
+    </a>
+  </div>
+</section>
+
+-->
+
+<!--
+
+<div class="sektion">
+  <h3 class="h3 fw-bolder">Lorem ipsum dolor sit amet</h3>
+  <p>
+    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+  </p>
+</div>
+
+
+-->
